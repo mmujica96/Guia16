@@ -12,9 +12,10 @@ router.get('/', function(req, res, next) {
   res.render('login', { title: 'Login' });
 });
 
+/**callback para la subruta */
 router.post('/validate', function(req, res, next) {  
-  let usuario = req.body.user;  
-  let contrasenia = req.body.password;  
+  let usuario = req.body.user;  //guardamos los datos que viene del usuario
+  let contrasenia = req.body.password;  //pasa los datos al servidor
     
   console.log("usuario: ", usuario)  
   console.log("contraseña: ", contrasenia)  
